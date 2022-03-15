@@ -1,0 +1,31 @@
+﻿<Window x:Class="FuncLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FuncLab"
+        mc:Ignorable="d"
+        Title="FuncLab" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" FontSize="12">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="EnterXMenu" Header="Ввести x" FontSize="12" Click="EnterXMenu_Click"/>
+            <MenuItem x:Name="FindYMenu" Header="Найти y" FontSize="12"/>
+        </Menu>
+        <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
+            <Button x:Name="EnterX" Content="Ввести x" Width="150" FontSize="12" Margin="3"/>
+            <Button x:Name="FindY" Content="Найти y" Width="150" FontSize="12" Margin="3"/>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
+            <Label Content="Значение 'a':" FontSize="12"/>
+            <TextBox x:Name="ValueA" Width="70" MaxLength="6" Margin="3" FontSize="12"/>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
+            <Label Content="Диапазон значений x:" FontSize="12"/>
+            <Label Content="от" FontSize="12"/>
+            <TextBox x:Name="FirstX" Width="70" MaxLength="6" Margin="3" FontSize="12"/>
+            <Label Content="до" FontSize="12"/>
+            <TextBox x:Name="SecondX" Width="70" MaxLength="6" Margin="3" FontSize="12"/>
+        </DockPanel>
+        <DataGrid x:Name="Table" CanUserAddRows="False" IsReadOnly="True"/>
+    </DockPanel>
+</Window>
