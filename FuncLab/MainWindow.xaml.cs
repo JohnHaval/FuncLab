@@ -27,7 +27,7 @@ namespace FuncLab
 
         private void EnterXMenu_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

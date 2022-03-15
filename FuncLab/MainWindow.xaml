@@ -26,6 +26,6 @@
             <Label Content="до" FontSize="12"/>
             <TextBox x:Name="SecondX" Width="70" MaxLength="6" Margin="3" FontSize="12"/>
         </DockPanel>
-        <DataGrid x:Name="Table" CanUserAddRows="False" IsReadOnly="True"/>
+        <DataGrid FontSize="12" x:Name="Table" CanUserAddRows="False" IsReadOnly="True"/>
     </DockPanel>
 </Window>
