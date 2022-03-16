@@ -94,5 +94,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AllXFinder\AllXFiller.csproj">
+      <Project>{979b54c3-4c5d-4c1f-95b4-2f56bb134470}</Project>
+      <Name>AllXFiller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AllYFinder\AllYFinder.csproj">
+      <Project>{00f19f6f-4904-49ef-ad88-0792b7c1faee}</Project>
+      <Name>AllYFinder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataGridFiller\DataGridFiller.csproj">
+      <Project>{12827c3a-a9b3-4b38-875e-d8acb5100e47}</Project>
+      <Name>DataGridFiller</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

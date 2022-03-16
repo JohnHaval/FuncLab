@@ -9,11 +9,14 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem x:Name="EnterXMenu" Header="Ввести x" FontSize="12" Click="EnterXMenu_Click"/>
-            <MenuItem x:Name="FindYMenu" Header="Найти y" FontSize="12"/>
+            <MenuItem x:Name="FindY111Menu" Header="Найти y=a/x^4" FontSize="12" Click="FindY111Menu_Click"/>
+            <MenuItem x:Name="FindY112Menu" Header="Найти y=3*tg(x)" FontSize="12" Click="FindY112Menu_Click"/>
+            <MenuItem x:Name="ClearTable" Header="Очистить таблицу" FontSize="12" Click="ClearTable_Click"/>
         </Menu>
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
-            <Button x:Name="EnterX" Content="Ввести x" Width="150" FontSize="12" Margin="3"/>
-            <Button x:Name="FindY" Content="Найти y" Width="150" FontSize="12" Margin="3"/>
+            <Button x:Name="EnterX" Content="Ввести x" Width="100" FontSize="12" Margin="3" Click="EnterXMenu_Click"/>
+            <Button x:Name="FindY111" Content="Найти y=a/x^4" Width="120" FontSize="12" Margin="3" Click="FindY111Menu_Click"/>
+            <Button x:Name="FindY112" Content="Найти y=3*tg(x)" Width="120" FontSize="12" Margin="3" Click="FindY112Menu_Click"/>
         </DockPanel>
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
             <Label Content="Значение 'a':" FontSize="12"/>
