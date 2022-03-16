@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FuncLab"
         mc:Ignorable="d"
-        Title="FuncLab" MinHeight="350" MinWidth="400" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" FontSize="12">
+        Title="FuncLab" Icon="LogoIco.ico"  MinHeight="350" MinWidth="400" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" FontSize="12">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem x:Name="EnterXMenu" Header="_Ввести x" FontSize="12" Click="EnterXMenu_Click"/>
             <MenuItem x:Name="FindY111Menu" Header="(_1)Найти y=a/x^4" FontSize="12" Click="FindY111Menu_Click"/>
             <MenuItem x:Name="FindY112Menu" Header="(_2)Найти y=3*tg(x)" FontSize="12" Click="FindY112Menu_Click"/>
-            <MenuItem x:Name="ClearTable" Header="_Очистить таблицу" FontSize="12" Click="ClearTable_Click"/>
+            <MenuItem x:Name="ClearTable" Header="О_чистить таблицу" FontSize="12" Click="ClearTable_Click"/>
+            <MenuItem x:Name="Support" Header="_Справка" FontSize="12" Click="Support_Click"/>
+            <MenuItem x:Name="AboutProgram" Header="_О программе" FontSize="12" Click="AboutProgram_Click"/>
         </Menu>
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
             <Button x:Name="EnterX" Content="Ввести x" Width="100" FontSize="12" Margin="3" Click="EnterXMenu_Click" TabIndex="1"/>

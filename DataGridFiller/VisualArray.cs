@@ -7,6 +7,7 @@ namespace DataGridFiller
     /// </summary>
     public static class VisualArray
     {
+        static int _a;
         static int j;
         static DataTable _res = new DataTable();
         /// <summary>
@@ -17,10 +18,10 @@ namespace DataGridFiller
         /// <param name="isX">Используется для удобной пометки столбца значений</param>
         /// <returns>_res, таблицу с обновленными значениями</returns>
         public static DataTable YToDataTable<T>(this T[] yMas, int exercise)
-        {            
-            _res.Columns.Add("y" + (++j), typeof(string));
+        {                        
             if (exercise == 1)
             {
+                _res.Columns.Add("y" + (++j) + $"(a={_a})", typeof(string));
                 DataRow row;
                 for (int i = 0; i < _res.Rows.Count; i++)
                 {
@@ -30,6 +31,7 @@ namespace DataGridFiller
             }
             if (exercise == 2)
             {
+                _res.Columns.Add("y" + (++j), typeof(string));
                 DataRow row;
                 for (int i = 0; i < _res.Rows.Count; i++)
                 {
@@ -59,6 +61,10 @@ namespace DataGridFiller
         {
             j = 0;
             return _res = new DataTable();
+        }
+        public static void GiveToColumnA(int a)
+        {
+            _a = a;
         }
     }
 }

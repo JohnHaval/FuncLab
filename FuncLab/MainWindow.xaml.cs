@@ -31,7 +31,7 @@ namespace FuncLab
         private int[] _xMas;
         private void EnterXMenu_Click(object sender, RoutedEventArgs e)
         {
-            int firstX = 0, secondX = 0;//Значения диапазона
+            int firstX, secondX;//Значения диапазона
             try
             {
                 firstX = Convert.ToInt32(FirstX.Text);
@@ -77,6 +77,7 @@ namespace FuncLab
             else
             {
                 Table.ItemsSource = null;
+                VisualArray.GiveToColumnA(a);
                 Table.ItemsSource = VisualArray.YToDataTable(YFinder11_1.YFind(_xMas, a), 1).DefaultView;
             }
         }
@@ -104,6 +105,22 @@ namespace FuncLab
             Table.ItemsSource = null;
             _xMas = null;
             VisualArray.ClearDataTable();
+        }
+
+        private void Support_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Данная программа имеет следующие возможности:\n" +
+                "1) В заданном промежутке 'x' найти значения функции 'y'\n" +
+                "2) Если требуется найти лишь 1 значение - ввести одинаковое число в диапазоне (например, от 24 до 24)\n" +
+                "3) Имеется возможность пользоваться AccessKeys для быстрого выполнения однотипных действий (Alt+Подчеркнутая буква в меню)\n" +
+                "4) Доступна возможность вводить лишь 1 значение 'a' для интервала(от x1 до x2)"
+                , "Справка", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void AboutProgram_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Разработчик: Лопаткин Сергей ИСП-31 (HaproBishop на GitHub)"
+                , "О программе", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
