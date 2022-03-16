@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FuncLab"
         mc:Ignorable="d"
-        Title="FuncLab" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" FontSize="12">
+        Title="FuncLab" MinHeight="350" MinWidth="400" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" FontSize="12">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem x:Name="EnterXMenu" Header="_Ввести x" FontSize="12" Click="EnterXMenu_Click"/>
-            <MenuItem x:Name="FindY111Menu" Header="Найти y=_a/x^4" FontSize="12" Click="FindY111Menu_Click"/>
-            <MenuItem x:Name="FindY112Menu" Header="Найти y=_3*tg(x)" FontSize="12" Click="FindY112Menu_Click"/>
+            <MenuItem x:Name="FindY111Menu" Header="(_1)Найти y=a/x^4" FontSize="12" Click="FindY111Menu_Click"/>
+            <MenuItem x:Name="FindY112Menu" Header="(_2)Найти y=3*tg(x)" FontSize="12" Click="FindY112Menu_Click"/>
             <MenuItem x:Name="ClearTable" Header="_Очистить таблицу" FontSize="12" Click="ClearTable_Click"/>
         </Menu>
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
             <Button x:Name="EnterX" Content="Ввести x" Width="100" FontSize="12" Margin="3" Click="EnterXMenu_Click" TabIndex="1"/>
-            <Button x:Name="FindY111" Content="Найти y=a/x^4" Width="120" FontSize="12" Margin="3" Click="FindY111Menu_Click" TabIndex="2"/>
-            <Button x:Name="FindY112" Content="Найти y=3*tg(x)" Width="120" FontSize="12" Margin="3" Click="FindY112Menu_Click" TabIndex="3"/>
+            <Button x:Name="FindY111" Content="(1)Найти y=a/x^4" Width="120" FontSize="12" Margin="3" Click="FindY111Menu_Click" TabIndex="2"/>
+            <Button x:Name="FindY112" Content="(2)Найти y=3*tg(x)" Width="120" FontSize="12" Margin="3" Click="FindY112Menu_Click" TabIndex="3"/>
         </DockPanel>
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
             <Label Content="Значение 'a':" FontSize="12"/>
