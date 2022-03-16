@@ -53,6 +53,7 @@ namespace FuncLab
                 return;
             }
             Table.ItemsSource = null;
+            VisualArray.ClearDataTable();
             Table.ItemsSource = VisualArray.XToDataTable(_xMas = XFiller.XFill(firstX, secondX)).DefaultView;
         }
 
@@ -102,6 +103,7 @@ namespace FuncLab
         {
             Table.ItemsSource = null;
             _xMas = null;
+            VisualArray.ClearDataTable();
         }
     }
 }

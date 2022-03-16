@@ -8,26 +8,26 @@
         Title="FuncLab" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" FontSize="12">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem x:Name="EnterXMenu" Header="Ввести x" FontSize="12" Click="EnterXMenu_Click"/>
-            <MenuItem x:Name="FindY111Menu" Header="Найти y=a/x^4" FontSize="12" Click="FindY111Menu_Click"/>
-            <MenuItem x:Name="FindY112Menu" Header="Найти y=3*tg(x)" FontSize="12" Click="FindY112Menu_Click"/>
-            <MenuItem x:Name="ClearTable" Header="Очистить таблицу" FontSize="12" Click="ClearTable_Click"/>
+            <MenuItem x:Name="EnterXMenu" Header="_Ввести x" FontSize="12" Click="EnterXMenu_Click"/>
+            <MenuItem x:Name="FindY111Menu" Header="Найти y=_a/x^4" FontSize="12" Click="FindY111Menu_Click"/>
+            <MenuItem x:Name="FindY112Menu" Header="Найти y=_3*tg(x)" FontSize="12" Click="FindY112Menu_Click"/>
+            <MenuItem x:Name="ClearTable" Header="_Очистить таблицу" FontSize="12" Click="ClearTable_Click"/>
         </Menu>
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
-            <Button x:Name="EnterX" Content="Ввести x" Width="100" FontSize="12" Margin="3" Click="EnterXMenu_Click"/>
-            <Button x:Name="FindY111" Content="Найти y=a/x^4" Width="120" FontSize="12" Margin="3" Click="FindY111Menu_Click"/>
-            <Button x:Name="FindY112" Content="Найти y=3*tg(x)" Width="120" FontSize="12" Margin="3" Click="FindY112Menu_Click"/>
+            <Button x:Name="EnterX" Content="Ввести x" Width="100" FontSize="12" Margin="3" Click="EnterXMenu_Click" TabIndex="1"/>
+            <Button x:Name="FindY111" Content="Найти y=a/x^4" Width="120" FontSize="12" Margin="3" Click="FindY111Menu_Click" TabIndex="2"/>
+            <Button x:Name="FindY112" Content="Найти y=3*tg(x)" Width="120" FontSize="12" Margin="3" Click="FindY112Menu_Click" TabIndex="3"/>
         </DockPanel>
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
             <Label Content="Значение 'a':" FontSize="12"/>
-            <TextBox x:Name="ValueA" Width="70" MaxLength="6" Margin="3" FontSize="12"/>
+            <TextBox x:Name="ValueA" Width="70" MaxLength="6" Margin="3" FontSize="12" TabIndex="0"/>
         </DockPanel>
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
             <Label Content="Диапазон значений x:" FontSize="12"/>
             <Label Content="от" FontSize="12"/>
-            <TextBox x:Name="FirstX" Width="70" MaxLength="6" Margin="3" FontSize="12"/>
+            <TextBox x:Name="FirstX" Width="70" MaxLength="6" Margin="3" FontSize="12" TabIndex="-2"/>
             <Label Content="до" FontSize="12"/>
-            <TextBox x:Name="SecondX" Width="70" MaxLength="6" Margin="3" FontSize="12"/>
+            <TextBox x:Name="SecondX" Width="70" MaxLength="6" Margin="3" FontSize="12" TabIndex="-1"/>
         </DockPanel>
         <DataGrid FontSize="12" x:Name="Table" CanUserAddRows="False" IsReadOnly="True"/>
     </DockPanel>

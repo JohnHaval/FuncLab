@@ -18,31 +18,30 @@ namespace DataGridFiller
         /// <returns>_res, таблицу с обновленными значениями</returns>
         public static DataTable YToDataTable<T>(this T[] yMas, int exercise)
         {            
-            _res.Columns.Add("y" + (j + 1), typeof(string));
+            _res.Columns.Add("y" + (++j), typeof(string));
             if (exercise == 1)
             {
                 DataRow row;
-                for (int i = 0; i < yMas.Length; i++)
+                for (int i = 0; i < _res.Rows.Count; i++)
                 {
-                    row = _res.NewRow();
-                    row[i] = yMas[i];
-                    _res.Rows.Add(row);
+                    row = _res.Rows[i];
+                    row[j] = yMas[i];
                 }                
             }
             if (exercise == 2)
             {
                 DataRow row;
-                for (int i = 0; i < yMas.Length; i++)
+                for (int i = 0; i < _res.Rows.Count; i++)
                 {
-                    row  = _res.NewRow();
-                    row[i] = yMas[i];
-                    _res.Rows.Add(row);
+                    row = _res.Rows[i];
+                    row[j] = yMas[i];
                 }               
             }
             return _res;
         }
         public static DataTable XToDataTable<T>(this T[] xMas)
         {
+            _res = new DataTable();
             _res.Columns.Add("x", typeof(string));            
             DataRow row;
             for (int i = 0; i < xMas.Length; i++)
@@ -58,7 +57,7 @@ namespace DataGridFiller
          /// <returns></returns>
         public static DataTable ClearDataTable()
         {
-            j = default;
+            j = 0;
             return _res = new DataTable();
         }
     }
