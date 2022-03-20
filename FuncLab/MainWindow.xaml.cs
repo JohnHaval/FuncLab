@@ -54,7 +54,10 @@ namespace FuncLab
             }
             Table.ItemsSource = null;
             VisualArray.ClearDataTable();
-            Table.ItemsSource = VisualArray.XToDataTable(_xMas = XFiller.XFill(firstX, secondX)).DefaultView;
+            _xMas = XFiller.XFill(firstX, secondX);
+            if (_xMas != null)
+                Table.ItemsSource = VisualArray.XToDataTable(_xMas).DefaultView;
+            else MessageBox.Show("Некорректно введено значение для диапазона 2", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void FindY111Menu_Click(object sender, RoutedEventArgs e)
